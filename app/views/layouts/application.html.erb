@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to 'RedditClone', posts_path, class: "navbar-brand" %>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'new', '#' %></li>
+        <li><%= link_to 'top', '#' %></li>
+      </ul>
+    </div>
+  </nav>    
+  <div class= "container">
+    <%= yield %>
+  </div>
 </body>
 </html>
